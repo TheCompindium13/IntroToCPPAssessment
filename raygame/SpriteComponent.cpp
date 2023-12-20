@@ -81,6 +81,6 @@ void SpriteComponent::draw()
     RAYLIB_H::DrawTextureEx(*m_texture, rayPos,
         (float)(rotation * 180.0f / PI), 1, spriteColor);
 
-    //DrawRectangleLines(pos.x, pos.y, getWidth(), getHeight(), RED);
+    DrawRectangleLines(pos.x, pos.y, getWidth(), getHeight(), RED);
 }
 
