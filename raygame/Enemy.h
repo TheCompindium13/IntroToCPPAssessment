@@ -4,7 +4,7 @@ class Enemy :
     public Actor
 {
 public:
-
+    
 
     void draw() override;
 };
