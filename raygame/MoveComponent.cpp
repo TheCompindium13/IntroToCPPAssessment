@@ -2,7 +2,7 @@
 
 
 
-MoveComponent::MoveComponent(float maxspeed, Actor* owner)
+MoveComponent::MoveComponent(float maxspeed, Actor* owner) : Component(owner, "MoveComponent")
 {
 	m_maxSpeed = maxspeed;
 }
