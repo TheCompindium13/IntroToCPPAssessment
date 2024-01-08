@@ -1,9 +1,16 @@
 #include "InputComponent.h"
-#include <raylib.h>
+#include "MoveComponent.h"
+#include "raylib.h"
 
-MathLibrary::Vector2 getMoveAxis();
 
 void InputComponent::Update(float deltaTime)
 {
+    MathLibrary::Vector2* direction = new MathLibrary::Vector2();
+    
+    if (RAYLIB_H::IsKeyDown(KeyboardKey::KEY_A))
+    {
+        direction =+ new MathLibrary::Vector2(-1, 0);
+    }
+
     
 }

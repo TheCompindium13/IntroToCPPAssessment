@@ -1,7 +1,6 @@
 #pragma once
 #include "Component.h"
 #include <Vector2.h>
-#include <Raylib.h>
 
 class InputComponent :
     public Component
@@ -15,6 +14,7 @@ public:
     void Update(float deltaTime);
 
 private:
+    
     
 };
 
