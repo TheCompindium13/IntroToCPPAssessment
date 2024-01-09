@@ -1,5 +1,4 @@
-<<<<<<< Updated upstream
-=======
+
 #pragma once
 #include "Component.h"
 #include "MoveComponent.h"
@@ -17,4 +16,3 @@ private:
     float m_maxSpeed;
 };
 
->>>>>>> Stashed changes
