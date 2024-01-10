@@ -3,7 +3,6 @@
 #include "Enemy.h"
 #include "Transform2D.h"
 #include "MoveComponent.h"
-#include <iostream>
 
 void SampleScene::start()
 {
