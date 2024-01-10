@@ -13,7 +13,7 @@ public:
     float getMaxSpeed() { return m_maxSpeed; }
     void setMaxSpeed(float maxSpeed) { m_maxSpeed = maxSpeed; }
     void update(float deltaTime);
-
+    
 private:
     MathLibrary::Vector2 m_velocity;
     float m_maxSpeed;
