@@ -16,14 +16,3 @@ void SampleScene::start()
 	enemy->getTransform()->setScale(scale);
 	addActor(enemy);
 }
-
-void SampleScene::end()
-{
-	{
-		std::cout << "Congratulations! You Win!" << std::endl;
-	}
-
-	{
-		std::cout << "You Lose!" << std::endl;
-	}
-}

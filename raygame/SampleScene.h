@@ -6,7 +6,5 @@ class SampleScene :
 {
 public:
     void start() override;
-
-    void end() override;
 };
 
