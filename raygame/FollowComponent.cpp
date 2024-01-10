@@ -2,7 +2,7 @@
 #include <raylib.h>
 void FollowComponent::update(float deltaTime)
 {
-    if (RA)
+
 }
 
 MathLibrary::Vector2 FollowComponent::GetIntendedPosition()
