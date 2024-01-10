@@ -1,20 +1,20 @@
+
 #pragma once
 #include "Component.h"
-#include <Vector2.h>
-
+#include "MoveComponent.h"
+#include "raylib.h"
+#include "Transform2D.h"
 class InputComponent :
     public Component
 {
 public:
-    
-    MathLibrary::Vector2 getMoveAxis();
-
-    bool getSpacePress();
-
-    void Update(float deltaTime);
+    float getSpeed() { return m_maxSpeed; }
+    InputComponent(float maxspeed, Actor* owner);
+    void update(float deltaTime) override;
 
 private:
-    
-    
+    float m_maxSpeed = 100;
+    MoveComponent* playerVelocity;
+
 };
 
