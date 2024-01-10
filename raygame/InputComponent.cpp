@@ -16,6 +16,7 @@ void InputComponent::update(float deltaTime)
     MathLibrary::Vector2 direction = MathLibrary::Vector2();
     Transform2D* jim = getOwner()->getTransform();
 
+
     if (RAYLIB_H::IsKeyDown(KeyboardKey::KEY_W))
     {
         direction = direction + MathLibrary::Vector2(0, -1);

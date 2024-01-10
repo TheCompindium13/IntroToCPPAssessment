@@ -8,8 +8,11 @@ class InputComponent :
     public Component
 {
 public:
-    float getSpeed() { return m_maxSpeed; }
+    /// <param name="maxspeed">How fast ehstever is inputed will move</param>
+    /// <param name="owner">the actor that uses InputComponent</param>
     InputComponent(float maxspeed, Actor* owner);
+    float getSpeed() { return m_maxSpeed; }
+;
     void update(float deltaTime) override;
 
 private:
