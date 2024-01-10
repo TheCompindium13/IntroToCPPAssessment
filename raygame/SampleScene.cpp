@@ -9,26 +9,19 @@ void SampleScene::start()
 {
 	//This is a better comment
 	Scene::start();
-	Enemy* enemy = new Enemy();
-	MoveComponent* enemyMove = (MoveComponent*)enemy->addComponent(new MoveComponent(100, enemy));
-	Enemy* minion = new Enemy();
-	MoveComponent* minionMove = (MoveComponent*)minion->addComponent(new MoveComponent(enemyMove->getMaxSpeed(), minion));
-	MathLibrary::Vector2 minionLocation = MathLibrary::Vector2(enemy->getTransform()->getWorldPosition().x+10, enemy->getTransform()->getWorldPosition().y + 10);
-	MathLibrary::Vector2 scale = MathLibrary::Vector2(50, 50);
+    MathLibrary::Vector2 scale = MathLibrary::Vector2(50, 50);
 
-	//MathLibrary::Vector2 scale = MathLibrary::Vector2(50, 50);
-	minion->getTransform()->setLocalPosition(minionLocation);
+	
+	
+	MathLibrary::Vector2 startLocatiom = MathLibrary::Vector2(500, 500);
+	Player* player = new Player(100, startLocatiom.x, startLocatiom.y, "Jim");
+
+
+	player->getTransform()->setScale(scale);
+	addActor(player);
+	Enemy* enemy = new Enemy(player);
 	enemy->getTransform()->setScale(scale);
-	minion->getTransform()->setScale(scale);
-	enemy->getTransform()->addChild(minion->getTransform());
-	addActor(minion);
 	addActor(enemy);
-	//MathLibrary::Vector2 startLocatiom = MathLibrary::Vector2(30, 30);
-	//Player* player = new Player(100, startLocatiom.x, startLocatiom.y, "Jim");
-
-
-	//player->getTransform()->setScale(scale);
-	//addActor(player);
 	
 
 	

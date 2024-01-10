@@ -11,8 +11,8 @@ Player::Player(float health, float x, float y, const char* name) : Actor(x, y, n
 
 void Player::start()
 {
-	m_moveComponent = (MoveComponent*)(this->addComponent(new MoveComponent(100, this)));
-	m_inputComponent = (InputComponent*)(this->addComponent(new InputComponent(100, this)));
+	m_moveComponent = (MoveComponent*)(this->addComponent(new MoveComponent(500, this)));
+	m_inputComponent = (InputComponent*)(this->addComponent(new InputComponent(500, this)));
 	input = (InputComponent*)(getComponent("InputComponent"));
 	move = (MoveComponent*)(getComponent("MoveComponent"));
 	Actor::start();
