@@ -21,9 +21,12 @@ void Player::start()
 void Player::draw()
 {
 	Actor::draw();
+	MathLibrary::Vector2 Facing = getTransform()->getForward();
+	
+	DrawLine(position.x, position.y, position.x + Facing.x * 2, position.y + Facing.y * 2, RED);
 	position = getTransform()->getLocalPosition();
 	float radius = getTransform()->getScale().x;
-	DrawCircle(position.x, position.y, 25, GREEN);
+	DrawCircle(position.x, position.y, radius, GREEN);
 }
 
 

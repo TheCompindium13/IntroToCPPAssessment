@@ -36,14 +36,15 @@ void InputComponent::update(float deltaTime)
         direction = direction + MathLibrary::Vector2(1, 0);
 
     }
-    if (RAYLIB_H::IsKeyDown(KeyboardKey::KEY_Q))
+    if (RAYLIB_H::IsKeyPressed(KeyboardKey::KEY_Q))
     {
         
-        jim->rotate(345);
+        //getOwner()->getTransform()->scale({2,2});
+        getOwner()->getTransform()->rotate(50);
     }
-    else if (RAYLIB_H::IsKeyDown(KeyboardKey::KEY_E))
+    else if (RAYLIB_H::IsKeyPressed(KeyboardKey::KEY_E))
     {
-        jim->rotate(-345);
+        getOwner()->getTransform()->scale({ .5,.5 });
     }
 
 
