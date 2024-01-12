@@ -9,9 +9,11 @@ class Bullet :
     public Actor
 {
 public:
-    Bullet(MathLibrary::Vector2 position, Actor* owner, MathLibrary::Vector2 velocity);
+    Bullet(float x, float y, Actor* owner, MathLibrary::Vector2 velocity, const char* name);
 
     void update(float deltaTime) override;
+
+    void Draw();
 
     void onCollision(Actor* other) override;
 
@@ -24,5 +26,6 @@ private:
     MathLibrary::Vector2 m_velocity;
     MoveComponent* m_moveComponent;
     SpriteComponent* m_spriteComponent;
+    MathLibrary::Vector2 m_position;
 };
 
