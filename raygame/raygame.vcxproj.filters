@@ -52,7 +52,7 @@
     <ClCompile Include="Bullet.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="ProjectileSpawner.cpp">
+    <ClCompile Include="ProjectileSpawnerComponent.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -105,7 +105,7 @@
     <ClInclude Include="Bullet.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="ProjectileSpawner.h">
+    <ClInclude Include="ProjectileSpawnerComponent.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
