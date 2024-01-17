@@ -14,14 +14,19 @@ Bullet::Bullet(Actor* shooter, float damage, MathLibrary::Vector2 velocity, Math
     m_shooter = shooter;
     m_damage = damage;
 
+    //Allows bullet to move.
     MoveComponent* moveComponent = new MoveComponent(100, this);
     addComponent(moveComponent);
 
+    //Allows bullet to have a sprite/image.
     SpriteComponent* sprite = new SpriteComponent(this, "Images/bullet.png");
     addComponent(sprite);
 
+    //Set the speed for the bullet.
     moveComponent->setVelocity(velocity);
+    //Set the position of the bullet.
     getTransform()->setLocalPosition(position);
+    //Set the size of the bullet.
     getTransform()->setScale({ 50,50 });
     
 }
@@ -36,6 +41,7 @@ void Bullet::update(float deltaTime)
 
     m_currentTime += deltaTime;
 
+    //Bullets should destroy itself when reaching it's certain amount of time.
     if (m_currentTime >= m_despawnDelay)
     {
         Engine::destroy(this);
@@ -54,5 +60,6 @@ void Bullet::onCollision(Actor* other)
         return;
     }
 
+    //Destroy the bullet if hitting an Actor. 
     Engine::destroy(other);
 }
