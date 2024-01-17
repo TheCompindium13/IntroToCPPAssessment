@@ -12,6 +12,13 @@ Actor::Actor()
 Actor::~Actor()
 {
     delete m_transform;
+
+    //Loops through all of the component pointers and...
+    for (int i = 0; i < m_componentCount; i++)
+    {
+        //...deletes them to free up memory.
+        delete m_components[i];
+    }
 }
 
 

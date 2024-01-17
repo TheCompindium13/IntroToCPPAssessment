@@ -25,9 +25,6 @@
     <ClCompile Include="Engine.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="FollowComponent.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -50,6 +47,12 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="InputComponent.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Bullet.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ProjectileSpawnerComponent.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -78,9 +81,6 @@
     <ClInclude Include="Engine.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="FollowComponent.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="MoveComponent.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -100,6 +100,12 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="InputComponent.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Bullet.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ProjectileSpawnerComponent.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

@@ -1,9 +1,11 @@
-
 #pragma once
 #include "Component.h"
 #include "MoveComponent.h"
 #include "raylib.h"
 #include "Transform2D.h"
+
+class ProjectileSpawnerComponent;
+
 class InputComponent :
     public Component
 {
@@ -14,6 +16,7 @@ public:
 
 private:
     float m_maxSpeed = 100;
+    ProjectileSpawnerComponent* m_gun;
     MoveComponent* playerVelocity;
 
 };
