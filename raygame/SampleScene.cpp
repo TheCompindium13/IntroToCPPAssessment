@@ -2,8 +2,10 @@
 #include "SpriteComponent.h"
 #include "Enemy.h"
 #include "Transform2D.h"
-
+#include "CircleCollider.h"
 #include "Player.h"
+
+
 
 void SampleScene::start()
 {
@@ -13,16 +15,29 @@ void SampleScene::start()
 
 	
 	
-	MathLibrary::Vector2 startLocatiom = MathLibrary::Vector2(500, 500);
-	Player* player = new Player(100, startLocatiom.x, startLocatiom.y, "Jim");
+	MathLibrary::Vector2 startLocation = MathLibrary::Vector2(500, 500);
+	MathLibrary::Vector2 enemystartLocation = MathLibrary::Vector2(100, 10);
+	MathLibrary::Vector2 wallstartLocation = MathLibrary::Vector2(30, 110);
 
 
+	Player* player = new Player(100, startLocation.x, startLocation.y, "Jim");
+
+	Player* body = new Player(100, startLocation.x, startLocation.y, "body");
+	body->getTransform()->setScale(scale);
 	player->getTransform()->setScale(scale);
+	player->getTransform()->addChild(body->getTransform());
+
+	addActor(body);
 	addActor(player);
-	Enemy* enemy = new Enemy(player);
-	enemy->getTransform()->setScale(scale);
+	Enemy* enemy = new Enemy(player, enemystartLocation.x, enemystartLocation.y);
+	
+	
+	enemy->getTransform()->setScale({ 30,30 });
+
+
 	addActor(enemy);
 	
-
 	
 }
+
+
