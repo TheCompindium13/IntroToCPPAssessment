@@ -23,7 +23,9 @@ Bullet::Bullet(Actor* shooter, float damage, MathLibrary::Vector2 velocity, Math
     moveComponent->setVelocity(velocity);
     getTransform()->setLocalPosition(position);
     getTransform()->setScale({ 50,50 });
-    
+    CircleCollider* m_bulletcollider = (CircleCollider*)(new CircleCollider(23, this));
+    setCollider(m_bulletcollider);
+
 }
 
 /// <summary>

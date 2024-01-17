@@ -34,10 +34,13 @@ void Player::update(float deltaTime)
 void Player::start()
 {
 	float radius = getTransform()->getScale().x;
-	m_playercollider = (CircleCollider*)(new CircleCollider(radius, this));
+	m_playercollider = (CircleCollider*)(new CircleCollider(50, this));
 	setCollider(m_playercollider);
     sprite = (SpriteComponent*)(this->addComponent(new SpriteComponent(this, "Images/player.png")));
-
+	if (getCollider() != m_playercollider)
+	{
+		return;
+	}
 	m_moveComponent = (MoveComponent*)(this->addComponent(new MoveComponent(500, this)));
 	m_inputComponent = (InputComponent*)(this->addComponent(new InputComponent(500, this)));
 	input = (InputComponent*)(getComponent("InputComponent"));
