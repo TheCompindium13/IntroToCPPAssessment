@@ -1,12 +1,14 @@
-
 #include "InputComponent.h"
-
+#include "Player.h"
+#include "ProjectileSpawnerComponent.h"
 
 
 InputComponent::InputComponent(float maxspeed, Actor* owner) : Component(owner,"InputComponent")
 {
     maxspeed = m_maxSpeed;
 
+    m_gun = new ProjectileSpawnerComponent(owner, 12, 50);
+    this->getOwner()->addComponent(m_gun);
 }
 
 void InputComponent::update(float deltaTime)
@@ -70,6 +72,11 @@ void InputComponent::update(float deltaTime)
     {
 
         getOwner()->getTransform()->scale({ 2,2 });
+    }
+
+    if (RAYLIB_H::IsMouseButtonPressed(0))
+    {
+        m_gun->fire();
     }
 
 

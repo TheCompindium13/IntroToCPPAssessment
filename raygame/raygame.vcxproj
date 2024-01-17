@@ -149,6 +149,7 @@
     <ClCompile Include="AABBCollider.cpp" />
     <ClCompile Include="Actor.cpp" />
     <ClCompile Include="ActorArray.cpp" />
+    <ClCompile Include="Bullet.cpp" />
     <ClCompile Include="CircleCollider.cpp" />
     <ClCompile Include="Collider.cpp" />
     <ClCompile Include="Component.cpp" />
@@ -158,6 +159,7 @@
     <ClCompile Include="main.cpp" />
     <ClCompile Include="MoveComponent.cpp" />
     <ClCompile Include="Player.cpp" />
+    <ClCompile Include="ProjectileSpawnerComponent.cpp" />
     <ClCompile Include="SampleScene.cpp" />
     <ClCompile Include="Scene.cpp" />
     <ClCompile Include="SpriteComponent.cpp" />
@@ -167,6 +169,7 @@
     <ClInclude Include="AABBCollider.h" />
     <ClInclude Include="Actor.h" />
     <ClInclude Include="ActorArray.h" />
+    <ClInclude Include="Bullet.h" />
     <ClInclude Include="CircleCollider.h" />
     <ClInclude Include="Collider.h" />
     <ClInclude Include="Component.h" />
@@ -175,6 +178,7 @@
     <ClInclude Include="InputComponent.h" />
     <ClInclude Include="MoveComponent.h" />
     <ClInclude Include="Player.h" />
+    <ClInclude Include="ProjectileSpawnerComponent.h" />
     <ClInclude Include="SampleScene.h" />
     <ClInclude Include="Scene.h" />
     <ClInclude Include="SpriteComponent.h" />
