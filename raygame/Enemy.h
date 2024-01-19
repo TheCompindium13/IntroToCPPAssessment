@@ -11,8 +11,7 @@ class Enemy :
 /// <param name="position">enemies starting x and y position</param>
 public:
     Enemy(Actor* target, float x,float y);
-    Enemy();
-    Enemy(MathLibrary::Vector2 position);
+
 
     void start() override;
     void draw() override;

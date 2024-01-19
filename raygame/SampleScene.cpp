@@ -16,17 +16,17 @@ void SampleScene::start()
 	
 	MathLibrary::Vector2 startLocation = MathLibrary::Vector2(500, 500);
 	MathLibrary::Vector2 enemystartLocation = MathLibrary::Vector2(100, 10);
-	MathLibrary::Vector2 wallstartLocation = MathLibrary::Vector2(30, 110);
+	MathLibrary::Vector2 teststartLocation = MathLibrary::Vector2(2, 2);
 
 
 	player = new Player(100, startLocation.x, startLocation.y, "Jim");
 
-	Player* body = new Player(100, startLocation.x, startLocation.y, "body");
-	body->getTransform()->setScale(scale);
+	Actor* test = new Actor(teststartLocation.x, teststartLocation.y, "test");
+	test->getTransform()->setScale({1,1});
 	player->getTransform()->setScale(scale);
-	player->getTransform()->addChild(body->getTransform());
+	test->addComponent(new SpriteComponent(test, "Images/player.png"));
+	player->getTransform()->addChild(test->getTransform());
 
-	addActor(body);
 	addActor(player);
 	enemy = new Enemy(player, enemystartLocation.x, enemystartLocation.y);
 	

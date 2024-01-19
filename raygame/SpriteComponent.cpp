@@ -82,7 +82,7 @@ void SpriteComponent::draw()
         (float)(rotation * 180.0f / PI), 1, spriteColor);
 
     //DrawRectangleLines(pos.x, pos.y, getWidth(), getHeight(), RED);
-     //DrawCircleLines(pos.x, pos.y, 30, RED);
+    DrawCircleLines(pos.x, pos.y, 30, RED);
 
 }
 
