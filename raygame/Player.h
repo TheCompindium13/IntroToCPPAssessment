@@ -9,17 +9,28 @@ class Player :
     
 {
 
-/// <param name="health">How many times the player can be shot</param>
-/// <param name="x">the players position locally on the x-axis</param>
-/// <param name="y">the players position locally on the y-axis</param>
-/// <param name="name"> The name is used to identify the player on screen</param>
 public:
 
+    /// <param name="health">How much points you need to be alive in the game.</param>
+    /// <param name="x">The player coordinate on the x-axis.</param>
+    /// <param name="y">The player coordinate on the y-axis.</param>
+    /// <param name="name">The name of the player.</param>
     Player(float health, float x, float y, const char* name);
 
-
+    /// <summary>
+    /// How the player will start off.
+    /// </summary>
     void start() override;
+
+    /// <summary>
+    /// Draw the player to the screen.
+    /// </summary>
     void draw() override;
+
+    /// <summary>
+    /// Update the player while the game continues.
+    /// </summary>
+    /// <param name="deltaTime">The time it takes to complete a frame.</param>
     void update(float deltaTime) override;
 
 private:
