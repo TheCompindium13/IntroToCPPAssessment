@@ -3,7 +3,7 @@
 #include "MoveComponent.h"
 #include "raylib.h"
 #include "Transform2D.h"
-
+#include <iostream>
 class ProjectileSpawnerComponent;
 
 class InputComponent :
