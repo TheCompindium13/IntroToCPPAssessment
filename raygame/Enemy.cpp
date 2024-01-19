@@ -1,6 +1,7 @@
 #include "Enemy.h"
 #include "raylib.h"
 #include "Transform2D.h"
+#include "Engine.h"
 
 
 Enemy::Enemy(Actor* target, float x, float y)
@@ -9,6 +10,14 @@ Enemy::Enemy(Actor* target, float x, float y)
 	m_position.x = x;
 	m_position.y = y;
 }
+
+void Enemy::onDestroy()
+{
+	Actor::onDestroy();
+
+	Engine::CloseApplication();
+}
+
 void Enemy::start()
 {
 	float radius = getTransform()->getScale().x;
@@ -41,4 +50,5 @@ void Enemy::update(float deltaTime)
 	MathLibrary::Vector2 direction = enemytotarget.getNormalized();
 	m_moveComponent->setVelocity(direction * 100);
 
+	
 }

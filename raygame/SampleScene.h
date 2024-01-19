@@ -8,6 +8,7 @@ class SampleScene :
 public:
     void start() override;
     void update(float deltaTime) override;
+
 private:
     Player* player;
     Enemy* enemy;

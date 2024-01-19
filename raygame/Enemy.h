@@ -14,10 +14,13 @@ public:
     Enemy();
     Enemy(MathLibrary::Vector2 position);
 
+    void onDestroy() override;
+
     void start() override;
     void draw() override;
     void update(float deltaTime) override;
 private:
+    bool onDestroyActive;
     Actor* m_target;
     MathLibrary::Vector2 m_position;
     MoveComponent* m_moveComponent;

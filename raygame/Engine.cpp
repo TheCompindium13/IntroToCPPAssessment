@@ -236,5 +236,10 @@ void Engine::destroyActorsInList()
 
 void Engine::CloseApplication()
 {
-	Engine::m_applicationShouldClose = true;
+	
+	RAYLIB_H::DrawText("Game Over! Press escape to close the game.", 50, 50, 25, RED);
+	if (RAYLIB_H::IsKeyPressed(KeyboardKey::KEY_ESCAPE))
+	{
+		Engine::m_applicationShouldClose = true;
+	}
 }

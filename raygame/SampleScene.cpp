@@ -35,15 +35,13 @@ void SampleScene::start()
 
 
 	addActor(enemy);
-	
-	
+
 }
 
 void SampleScene::update(float deltaTime)
 {
 	Scene::update(deltaTime);
+
+	
 }
-
-
-
 
