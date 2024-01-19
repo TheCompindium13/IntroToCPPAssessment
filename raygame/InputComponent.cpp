@@ -18,10 +18,9 @@ void InputComponent::update(float deltaTime)
     MathLibrary::Vector2 direction = MathLibrary::Vector2();
     Transform2D* jim = getOwner()->getTransform();
 
-    //------------------------------------------------------------------------------------\\
+    //------------------------------------------------------------------------------------
     //Adds the new vector of to direction you want to go when you press the corrasponding key.
-    //------------------------------------------------------------------------------------\\
-
+    //------------------------------------------------------------------------------------
     if (RAYLIB_H::IsKeyDown(KeyboardKey::KEY_W))
     {
         direction = direction + MathLibrary::Vector2(0, -1);
@@ -41,17 +40,26 @@ void InputComponent::update(float deltaTime)
         direction = direction + MathLibrary::Vector2(1, 0);
 
     }
+    //------------------------------------------------------------------------------------
+    //Rotates the Owner one direction harshly
+    //------------------------------------------------------------------------------------
     if (RAYLIB_H::IsKeyPressed(KeyboardKey::KEY_Q))
     {
         
         getOwner()->getTransform()->rotate(1);
 
     }
+    //------------------------------------------------------------------------------------
+    //Rotates the Owner one direction softly
+    //------------------------------------------------------------------------------------
     else if (RAYLIB_H::IsKeyPressed(KeyboardKey::KEY_E))
     {
 
         getOwner()->getTransform()->rotate(.10);
     }
+    //------------------------------------------------------------------------------------
+    //Scales the wner based on mouse wheel movement.
+    //------------------------------------------------------------------------------------
     //A value that can keep track of the direction to scale in. 
     float scaleDirection = 1;
     
@@ -65,15 +73,14 @@ void InputComponent::update(float deltaTime)
         MathLibrary::Vector2 scale = getOwner()->getTransform()->getScale() + MathLibrary::Vector2(1, 1) * scaleDirection;
         getOwner()->getTransform()->setScale(scale);
     }
-    //------------------------------------------------------------------------------------\\
-    //Checks the size of the player and if it is within the set paramaters increases/decreases he size of the player
-    //------------------------------------------------------------------------------------\\
-    
-
+    //------------------------------------------------------------------------------------
+    //Fires a bullet if left mous button clicked
+    //------------------------------------------------------------------------------------
     if (RAYLIB_H::IsMouseButtonPressed(0))
     {
         m_gun->fire();
     }
+   //------------------------------------------------------------------------------------
 
 
     playerVelocity = (MoveComponent*)(getOwner()->getComponent("MoveComponent"));
