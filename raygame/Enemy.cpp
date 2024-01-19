@@ -15,6 +15,9 @@ void Enemy::onDestroy()
 {
 	Actor::onDestroy();
 
+	m_text = new TextBox("Game Over! Press escape to close the game.", 50, 50, "Game Over");
+	
+
 	Engine::CloseApplication();
 }
 

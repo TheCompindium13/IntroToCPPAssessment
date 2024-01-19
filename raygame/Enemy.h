@@ -3,6 +3,7 @@
 #include "MoveComponent.h"
 #include "CircleCollider.h"
 #include "SpriteComponent.h"
+#include "TextBox.h"
 class Enemy :
     public Actor
 {
@@ -19,7 +20,7 @@ public:
     void draw() override;
     void update(float deltaTime) override;
 private:
-    bool onDestroyActive;
+    TextBox* m_text;
     Actor* m_target;
     MathLibrary::Vector2 m_position;
     MoveComponent* m_moveComponent;
