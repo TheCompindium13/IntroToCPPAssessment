@@ -21,6 +21,7 @@ void Enemy::onDestroy()
 void Enemy::start()
 {
 	float radius = getTransform()->getScale().x;
+	sprite = (SpriteComponent*)(this->addComponent(new SpriteComponent(this, "Images/enemy.png")));
 
 	m_moveComponent = (MoveComponent*)(this->addComponent(new MoveComponent(radius, this)));
 	m_enemycollider = (CircleCollider*)(new CircleCollider(50, this));
@@ -32,14 +33,10 @@ void Enemy::start()
 	
 	Actor::start();
 }
-Enemy::Enemy()
-{
 
-}
 void Enemy::draw()
 {
 	Actor::draw();
-	sprite = (SpriteComponent*)(this->addComponent(new SpriteComponent(this, "Images/enemy.png")));
 
 }
 

@@ -53,8 +53,7 @@ void Player::draw()
 	
 	Actor::draw();
 	MathLibrary::Vector2 Facing = getTransform()->getForward();
-	
-	//DrawLine(position.x, position.y, m_playercollider->getOwner()->getTransform()->getLocalPosition().x + Facing.x * 10, m_playercollider->getOwner()->getTransform()->getLocalPosition().y + Facing.y * 100, RED);
+	DrawLine(position.x, position.y, m_playercollider->getOwner()->getTransform()->getLocalPosition().x + Facing.x * 10, m_playercollider->getOwner()->getTransform()->getLocalPosition().y + Facing.y * 100, RED);
 	position = getTransform()->getLocalPosition();
 
 

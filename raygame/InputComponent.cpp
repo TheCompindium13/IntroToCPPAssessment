@@ -41,16 +41,16 @@ void InputComponent::update(float deltaTime)
         direction = direction + MathLibrary::Vector2(1, 0);
 
     }
-    if (RAYLIB_H::IsKeyDown(KeyboardKey::KEY_Q))
+    if (RAYLIB_H::IsKeyPressed(KeyboardKey::KEY_Q))
     {
         
-        getOwner()->getTransform()->rotate(50);
+        getOwner()->getTransform()->rotate(1);
 
     }
-    else if (RAYLIB_H::IsKeyDown(KeyboardKey::KEY_E))
+    else if (RAYLIB_H::IsKeyPressed(KeyboardKey::KEY_E))
     {
 
-        getOwner()->getTransform()->rotate(.50);
+        getOwner()->getTransform()->rotate(.10);
     }
     //A value that can keep track of the direction to scale in. 
     float scaleDirection = 1;
