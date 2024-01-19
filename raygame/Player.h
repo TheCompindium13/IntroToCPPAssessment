@@ -8,7 +8,7 @@ class Player :
     public Actor
     
 {
-
+    
 /// <param name="health">How many times the player can be shot</param>
 /// <param name="x">the players position locally on the x-axis</param>
 /// <param name="y">the players position locally on the y-axis</param>
